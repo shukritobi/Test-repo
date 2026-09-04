@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#090909" />
+  <meta name="description" content="NOTTY DROP by Chemica Perfume. Mobile-first perfume catalogue and WhatsApp ordering experience." />
+  <title>NOTTY DROP | Chemica Perfume</title>
+  <style>
+    :root{
+      --bg:#080808;--panel:#111;--panel2:#161616;--text:#f7f4ef;--muted:#aaa39d;
+      --red:#ee2f3d;--red2:#8e101c;--gold:#d7a84a;--blue:#2d58dc;--line:rgba(255,255,255,.11);
+      --shadow:0 28px 80px rgba(0,0,0,.5);--radius:24px;--max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden}
+    button,a{font:inherit} a{color:inherit;text-decoration:none} button{border:0;cursor:pointer} img{display:block;max-width:100%}
+    .noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+    .wrap{width:min(var(--max),calc(100% - 34px));margin:auto}.eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:#d3ccc6;font-weight:800}.muted{color:var(--muted)}
+    .announcement{background:#efe9df;color:#111;padding:9px 12px;text-align:center;font-size:.76rem;font-weight:800;letter-spacing:.05em;position:relative;z-index:60}
+    header{position:sticky;top:0;z-index:45;background:rgba(8,8,8,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.05em;font-size:1.35rem}.drop{width:12px;height:17px;background:var(--red);border-radius:60% 40% 60% 40%;transform:rotate(45deg);box-shadow:0 0 26px rgba(238,47,61,.55)}
+    nav{display:flex;align-items:center;gap:24px;color:#cac4bf;font-size:.88rem}nav a:hover{color:#fff}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 18px;font-weight:850;transition:.22s ease}.nav-cta{background:#fff;color:#111}.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 30px rgba(238,47,61,.25)}.btn-primary:hover{transform:translateY(-2px);background:#fa3d4b}.btn-secondary{background:#171717;border:1px solid var(--line);color:#fff}.btn-secondary:hover{background:#202020}.icon{width:18px;height:18px;display:inline-block}
+    .hero{min-height:760px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px;padding:72px 0 82px;position:relative}.hero:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(181,23,37,.21),transparent 64%);left:-360px;top:20px;pointer-events:none}.hero h1{font-size:clamp(3.4rem,7vw,7.2rem);line-height:.89;letter-spacing:-.075em;margin:18px 0 26px;max-width:820px}.hero h1 em{font-style:normal;color:var(--red)}.lead{font-size:clamp(1.05rem,1.5vw,1.28rem);color:#c6bfba;max-width:600px;margin:0 0 30px}.hero-actions{display:flex;flex-wrap:wrap;gap:11px}.hero-note{display:flex;gap:18px;align-items:center;margin-top:30px;color:#9f9892;font-size:.82rem}.rating{display:flex;align-items:center;gap:8px;color:#fff;font-weight:800}.stars{color:#ffcc66;letter-spacing:.08em}
+    .visual{position:relative}.hero-card{position:relative;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.15);background:#15090b;box-shadow:var(--shadow);aspect-ratio:1/1}.hero-card img{width:100%;height:100%;object-fit:cover}.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45))}.badge{position:absolute;z-index:3;background:rgba(8,8,8,.78);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);border-radius:18px;padding:13px 15px;font-size:.79rem;box-shadow:0 14px 40px rgba(0,0,0,.35)}.badge.top{top:18px;right:18px}.badge.bottom{bottom:18px;left:18px}.badge b{display:block;font-size:1.05rem;color:#fff}.mini-logo{position:absolute;left:-32px;top:44px;width:82px;height:82px;border-radius:22px;border:1px solid rgba(255,255,255,.18);overflow:hidden;box-shadow:var(--shadow);z-index:5}.mini-logo img{width:100%;height:100%;object-fit:cover}
+    .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0d0d0d}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 0}.proof-item{padding:3px 26px;border-right:1px solid var(--line)}.proof-item:first-child{padding-left:0}.proof-item:last-child{border-right:0}.proof-item b{display:block;font-size:1.18rem}.proof-item span{font-size:.78rem;color:var(--muted)}
+    section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.section-head h2{font-size:clamp(2.2rem,5vw,4.7rem);line-height:.96;letter-spacing:-.06em;margin:8px 0 0;max-width:800px}.section-head p{color:var(--muted);max-width:450px;margin:0}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;position:relative;transition:.25s ease}.product:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.22)}.product-media{aspect-ratio:1/1;overflow:hidden;background:#171717}.product-media img{width:100%;height:100%;object-fit:cover;transition:.45s ease}.product:hover .product-media img{transform:scale(1.035)}.product-body{padding:20px}.product-tag{font-size:.69rem;text-transform:uppercase;letter-spacing:.15em;color:#a9a19a;font-weight:800}.product-title{font-size:1.42rem;margin:6px 0 2px;letter-spacing:-.035em}.product-copy{font-size:.86rem;color:#99918b;margin:0 0 18px}.price-row{display:flex;align-items:end;justify-content:space-between;gap:14px}.price b{font-size:1.4rem}.price small{display:block;color:#8f8781;font-size:.7rem}.add{width:44px;height:44px;border-radius:50%;background:#fff;color:#111;font-size:1.4rem;display:grid;place-items:center;transition:.2s}.add:hover{background:var(--red);color:#fff;transform:rotate(8deg)}.product.featured{grid-column:span 2}.product.featured .product-media{aspect-ratio:2/1}.product.featured .product-body{display:grid;grid-template-columns:1fr auto;align-items:end}.product.featured .price-row{min-width:180px}.product.gold .add{background:var(--gold)}.product.blue .add{background:#4c6fea;color:white}
+    .collection{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.collection-card{min-height:520px;border-radius:30px;border:1px solid var(--line);overflow:hidden;position:relative;background:#131313}.collection-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.collection-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.8))}.collection-content{position:absolute;z-index:2;left:28px;right:28px;bottom:28px}.collection-content h3{font-size:2.2rem;line-height:1;margin:5px 0 10px;letter-spacing:-.05em}.collection-content p{color:#c8c1bc;max-width:480px;margin:0}
+    .how{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}.how h2{font-size:clamp(2.7rem,5vw,5rem);line-height:.93;letter-spacing:-.06em;margin:12px 0 20px}.steps{display:grid;gap:0;border-top:1px solid var(--line)}.step{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:29px 0;border-bottom:1px solid var(--line)}.num{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);font-weight:900;color:#bdb5ae}.step h3{margin:2px 0 5px;font-size:1.15rem}.step p{margin:0;color:var(--muted);font-size:.9rem}
+    .social{background:linear-gradient(150deg,#18090b,#0d0d0d 42%,#07101d);border:1px solid var(--line);border-radius:34px;padding:54px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;overflow:hidden;position:relative}.social:before{content:"NOTTY DROP";position:absolute;right:-50px;top:-32px;font-size:8rem;font-weight:950;letter-spacing:-.07em;color:rgba(255,255,255,.025);white-space:nowrap}.social h2{font-size:clamp(2.5rem,5vw,5rem);line-height:.93;letter-spacing:-.06em;margin:10px 0 20px}.social p{color:#b8b0aa;max-width:540px}.social-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.social-card{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:22px;padding:20px;min-height:145px;display:flex;flex-direction:column;justify-content:space-between}.social-card b{font-size:1.05rem}.social-card span{color:#aaa19a;font-size:.79rem}
+    .faq{max-width:860px;margin:auto}.faq h2{text-align:center;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.06em;margin:0 0 38px}.faq-item{border-top:1px solid var(--line)}.faq-item:last-child{border-bottom:1px solid var(--line)}.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 0;background:none;color:#fff;text-align:left;font-weight:800}.faq-a{max-height:0;overflow:hidden;color:var(--muted);transition:max-height .3s ease}.faq-a p{margin:0;padding:0 36px 22px 0}.plus{font-size:1.3rem;transition:.25s}.faq-item.open .plus{transform:rotate(45deg)}.faq-item.open .faq-a{max-height:180px}
+    .final{padding-bottom:120px}.final-card{border-radius:36px;background:#efe9df;color:#111;padding:68px 64px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:end;position:relative;overflow:hidden}.final-card:after{content:"DROP";position:absolute;right:-18px;top:-70px;font-size:15rem;line-height:1;font-weight:950;color:rgba(0,0,0,.035);letter-spacing:-.09em}.final h2{font-size:clamp(2.8rem,6vw,6rem);line-height:.88;letter-spacing:-.07em;margin:0;max-width:760px;position:relative;z-index:2}.final p{color:#665e57;max-width:600px;position:relative;z-index:2}.final-actions{display:flex;flex-direction:column;gap:10px;position:relative;z-index:3;min-width:215px}.final .btn-primary{padding:15px 21px}.final .btn-secondary{background:#111;color:#fff;padding:15px 21px}
+    footer{border-top:1px solid var(--line);padding:30px 0 80px;color:#8e8781;font-size:.78rem}.footer-row{display:flex;justify-content:space-between;gap:25px}.footer-links{display:flex;gap:20px}
+    .cart-fab{position:fixed;z-index:70;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translate(-50%,120px);opacity:0;background:#f5f1eb;color:#111;border-radius:999px;padding:10px 12px 10px 18px;display:flex;align-items:center;gap:18px;box-shadow:0 20px 55px rgba(0,0,0,.45);transition:.3s ease}.cart-fab.show{transform:translate(-50%,0);opacity:1}.cart-fab b{white-space:nowrap;font-size:.86rem}.cart-fab button{background:#111;color:#fff;border-radius:999px;padding:10px 16px;font-weight:850}.drawer-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(5px);z-index:80;opacity:0;pointer-events:none;transition:.25s}.drawer-backdrop.show{opacity:1;pointer-events:auto}.drawer{position:fixed;z-index:81;right:0;top:0;height:100%;width:min(430px,100%);background:#111;border-left:1px solid var(--line);transform:translateX(100%);transition:.3s ease;display:flex;flex-direction:column}.drawer.show{transform:translateX(0)}.drawer-head{padding:24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.drawer-head h3{margin:0;font-size:1.3rem}.close{width:40px;height:40px;border-radius:50%;background:#202020;color:#fff;font-size:1.2rem}.cart-list{padding:18px 24px;overflow:auto;flex:1}.cart-empty{color:var(--muted);padding:40px 0;text-align:center}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.cart-item b{display:block}.cart-item span{color:var(--muted);font-size:.8rem}.qty{display:flex;align-items:center;gap:9px}.qty button{width:28px;height:28px;border-radius:50%;background:#202020;color:#fff}.drawer-foot{border-top:1px solid var(--line);padding:20px 24px 26px}.total{display:flex;justify-content:space-between;margin-bottom:14px}.total b:last-child{font-size:1.3rem}.drawer-foot .btn{width:100%;padding:15px 20px}.fine{font-size:.68rem;color:#77716d;margin-top:10px;text-align:center}
+    @media(max-width:900px){nav>a{display:none}.hero{grid-template-columns:1fr;gap:34px;padding:48px 0 60px;min-height:auto}.hero h1{font-size:clamp(3.45rem,16vw,6.6rem)}.visual{max-width:650px}.proof-grid{grid-template-columns:repeat(2,1fr)}.proof-item:nth-child(2){border-right:0}.proof-item:nth-child(n+3){margin-top:18px}.products{grid-template-columns:repeat(2,1fr)}.product.featured{grid-column:span 2}.collection,.how,.social{grid-template-columns:1fr}.collection-card{min-height:440px}.final-card{grid-template-columns:1fr}.final-actions{flex-direction:row;flex-wrap:wrap}.social{padding:38px}.mini-logo{left:12px;top:12px}.badge.top{top:12px;right:12px}}
+    @media(max-width:600px){.announcement{font-size:.66rem}.wrap{width:min(100% - 26px,var(--max))}.nav{height:64px}.brand{font-size:1.12rem}nav{gap:10px}.nav-cta{padding:10px 13px;font-size:.78rem}.hero{padding-top:35px}.hero h1{margin-top:13px}.lead{font-size:1rem}.hero-actions .btn{flex:1}.hero-note{flex-wrap:wrap}.hero-card{border-radius:25px}.badge{font-size:.7rem;padding:10px 12px}.badge b{font-size:.9rem}.mini-logo{width:62px;height:62px;border-radius:17px}.proof-grid{padding:18px 0}.proof-item{padding:4px 12px}.proof-item:first-child{padding-left:0}.proof-item b{font-size:1rem}.proof-item span{font-size:.68rem}section{padding:72px 0}.section-head{align-items:start;flex-direction:column;margin-bottom:25px}.products{grid-template-columns:1fr;gap:13px}.product.featured{grid-column:auto}.product.featured .product-media{aspect-ratio:1/1}.product.featured .product-body{display:block}.product.featured .price-row{min-width:0}.product-body{padding:17px}.product-title{font-size:1.28rem}.collection-card{min-height:380px}.collection{gap:13px}.collection-content{left:20px;right:20px;bottom:20px}.collection-content h3{font-size:1.85rem}.how{gap:20px}.step{grid-template-columns:54px 1fr;gap:10px}.social{padding:27px 21px;border-radius:26px}.social-cards{grid-template-columns:1fr 1fr}.social-card{min-height:125px;padding:15px}.final-card{padding:46px 24px;border-radius:28px}.final-actions{display:grid;grid-template-columns:1fr}.footer-row{flex-direction:column}.cart-fab{width:calc(100% - 24px);justify-content:space-between}.cart-fab button{padding:10px 14px}}
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="announcement">READY STOCK SELANGOR · ORDER WHATSAPP · SHOP DI SHOPEE</div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="NOTTY DROP home"><span class="drop"></span>notty.drop</a>
+    <nav>
+      <a href="#produk">Produk</a><a href="#cara">Cara Pakai</a><a href="#faq">FAQ</a>
+      <a class="nav-cta" href="https://wa.me/60134835772?text=Hi%20Chemica%2C%20saya%20nak%20tanya%20pasal%20NOTTY%20DROP." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Chemica Perfume · Phero Collection</div>
+      <h1>Masuk biasa.<br><em>Keluar diingati.</em></h1>
+      <p class="lead">NOTTY DROP ialah wangian phero lelaki daripada Chemica Perfume. Landing page baru ini fokus satu benda: bagi orang faham produk cepat, pilih cepat, dan terus order.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#produk">Pilih Wangian ↓</a>
+        <a class="btn btn-secondary" href="https://shopee.com.my/NOTTY-DROP-perfume-phero-i.126668485.43923261988" target="_blank" rel="noopener">Lihat Shopee</a>
+      </div>
+      <div class="hero-note"><span class="rating"><span class="stars">★★★★★</span> 4.7</span><span>60 sold di listing NOTTY DROP</span><span>Shop Chemica 4.8</span></div>
+    </div>
+    <div class="visual">
+      <div class="mini-logo"><img src="https://mms.img.susercontent.com/430dad59f609c15f681574e132a878d6_tn" alt="Chemica logo" /></div>
+      <div class="hero-card">
+        <img src="https://down-my.img.susercontent.com/file/my-11134207-820lc-mflobbnb1bm428" alt="NOTTY DROP phero perfume" fetchpriority="high" />
+        <div class="badge top"><span class="muted">Shopee price snapshot</span><b>RM39.99</b></div>
+        <div class="badge bottom"><span class="muted">For Men</span><b>NOTTY DROP · PHERO</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <div class="wrap proof-grid">
+      <div class="proof-item"><b>4.7 ★</b><span>NOTTY DROP rating</span></div>
+      <div class="proof-item"><b>60 sold</b><span>Shopee product listing</span></div>
+      <div class="proof-item"><b>4.8 ★</b><span>Chemica Perfume shop</span></div>
+      <div class="proof-item"><b>Selangor</b><span>Seller location shown on Shopee</span></div>
+    </div>
+  </div>
+
+  <section id="produk">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Choose your drop</div><h2>Pilih ikut vibe.<br>Bukan ikut teka.</h2></div>
+        <p>Harga di bawah ialah snapshot daripada listing Shopee Chemica pada 4 Sept 2026. Promo semasa boleh berubah.</p>
+      </div>
+      <div class="products">
+        <article class="product featured">
+          <div class="product-media"><img loading="lazy" src="https://down-my.img.susercontent.com/file/my-11134207-820lc-mflobbnb1bm428" alt="NOTTY DROP perfume" /></div>
+          <div class="product-body">
+            <div><div class="product-tag">Signature · For Men · Phero</div><h3 class="product-title">NOTTY DROP</h3><p class="product-copy">Hero product. Strong visual identity, easy to remember, made for a bold first impression.</p></div>
+            <div class="price-row"><div class="price"><b>RM39.99</b><small>Shopee snapshot</small></div><button class="add" aria-label="Tambah NOTTY DROP" data-name="NOTTY DROP" data-price="39.99">+</button></div>
+          </div>
+        </article>
+        <article class="product gold">
+          <div class="product-media"><img loading="lazy" src="https://down-my.img.susercontent.com/file/my-11134207-820lh-mrukyftk91j844" alt="Buluh Jate perfume" /></div>
+          <div class="product-body"><div class="product-tag">Chemica Collection</div><h3 class="product-title">Buluh Jate</h3><p class="product-copy">Pewangi pemikat wanita dalam koleksi Chemica.</p><div class="price-row"><div class="price"><b>RM35.99</b><small>RM30 each for 2+ on Shopee listing</small></div><button class="add" aria-label="Tambah Buluh Jate" data-name="Buluh Jate" data-price="35.99">+</button></div></div>
+        </article>
+        <article class="product blue">
+          <div class="product-media"><img loading="lazy" src="https://down-my.img.susercontent.com/file/my-11134207-820l8-meyv549mb4zq85" alt="Teruna Idaman perfume" /></div>
+          <div class="product-body"><div class="product-tag">For Men · Phero</div><h3 class="product-title">Teruna Idaman</h3><p class="product-copy">Satu lagi pilihan phero lelaki daripada Chemica Perfume.</p><div class="price-row"><div class="price"><b>RM35.00</b><small>Shopee snapshot</small></div><button class="add" aria-label="Tambah Teruna Idaman" data-name="Teruna Idaman" data-price="35">+</button></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">More from Chemica</div><h2>Brand boleh berkembang,<br>bukan satu produk sahaja.</h2></div><p>Struktur ini boleh terus jadi katalog penuh bila Chemica tambah SKU, bundle atau campaign baru.</p></div>
+      <div class="collection">
+        <div class="collection-card">
+          <img loading="lazy" src="https://mms.img.susercontent.com/sg-11134210-7rfig-m354d57dglwwbc%40resize_bs700x700" alt="Buluh Jate collection" />
+          <div class="collection-content"><div class="eyebrow">Chemica Collection</div><h3>Buluh Jate</h3><p>Visual warm dan premium. Sesuai dijadikan secondary campaign tanpa ganggu identity NOTTY DROP.</p></div>
+        </div>
+        <div class="collection-card">
+          <img loading="lazy" src="https://mms.img.susercontent.com/sg-11134210-7rfgj-m354d55pkfpvf5%40resize_bs700x700" alt="Vhawa perfume collection" />
+          <div class="collection-content"><div class="eyebrow">For Her</div><h3>Vhawa</h3><p>Produk lain yang dipaparkan pada storefront Chemica. Availability dan harga boleh disahkan melalui WhatsApp.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cara">
+    <div class="wrap how">
+      <div><div class="eyebrow">Simple flow</div><h2>Dari scroll<br>ke order.</h2><p class="muted">Page ini dibina mobile-first sebab traffic daripada Threads, TikTok dan Instagram biasanya masuk terus melalui telefon.</p></div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><div><h3>Pilih produk</h3><p>Bandingkan pilihan dan harga tanpa perlu buka banyak link.</p></div></div>
+        <div class="step"><div class="num">02</div><div><h3>Tambah ke order</h3><p>Tekan + pada produk. Website kira jumlah secara automatik.</p></div></div>
+        <div class="step"><div class="num">03</div><div><h3>Hantar ke WhatsApp</h3><p>Order list dan jumlah akan siap dalam mesej. Customer cuma perlu tekan send.</p></div></div>
+        <div class="step"><div class="num">04</div><div><h3>Checkout ikut channel</h3><p>Customer masih boleh terus ke Shopee atau checkout Chemica yang sedia ada.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:10px">
+    <div class="wrap social">
+      <div><div class="eyebrow">Built for social traffic</div><h2>Scroll pendek.<br>CTA jelas.</h2><p>Untuk audience yang datang daripada content viral, page tak patut rasa macam brochure corporate. Produk, proof, harga dan button order perlu muncul cepat.</p><a class="btn btn-primary" href="https://wa.me/60134835772?text=Hi%20Chemica%2C%20saya%20nak%20tanya%20pasal%20NOTTY%20DROP." target="_blank" rel="noopener">Chat Chemica</a></div>
+      <div class="social-cards">
+        <div class="social-card"><b>Threads</b><span>@notty.drop</span></div>
+        <div class="social-card"><b>Instagram</b><span>@notty.drop</span></div>
+        <div class="social-card"><b>Shopee</b><span>Chemica Perfume</span></div>
+        <div class="social-card"><b>WhatsApp</b><span>013-483 5772</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq">
+      <h2>Soalan cepat.</h2>
+      <div class="faq-item"><button class="faq-q"><span>Harga website sama dengan Shopee?</span><span class="plus">+</span></button><div class="faq-a"><p>Harga yang dipaparkan di sini ialah snapshot listing Shopee pada 4 Sept 2026. Promo, voucher atau harga website boleh berubah. WhatsApp Chemica untuk harga terkini.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Boleh COD?</span><span class="plus">+</span></button><div class="faq-a"><p>Listing Shopee Chemica menunjukkan pilihan Cash on Delivery. Untuk order terus melalui WhatsApp atau website, sahkan kaedah bayaran dengan seller.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Macam mana nak guna perfume dropper?</span><span class="plus">+</span></button><div class="faq-a"><p>Gunakan mengikut arahan pada label produk dan sapukan secara sederhana pada pulse points. Jika anda sensitif kepada fragrance, buat patch test terlebih dahulu.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Boleh tambah payment gateway kemudian?</span><span class="plus">+</span></button><div class="faq-a"><p>Boleh. Struktur katalog dan cart ini boleh disambungkan kepada Billplz, ToyyibPay atau checkout backend tanpa ubah keseluruhan UI.</p></div></div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap final-card">
+      <div><h2>Pick your drop.</h2><p>NOTTY DROP by Chemica Perfume. Pilih produk, tambah kuantiti dan terus hantar order ke WhatsApp.</p></div>
+      <div class="final-actions"><a class="btn btn-primary" href="#produk">Pilih Produk</a><a class="btn btn-secondary" href="https://chemicahq.com/checkouts/landing" target="_blank" rel="noopener">Checkout Chemica</a></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap footer-row"><div>Concept landing page for NOTTY DROP · Chemica Perfume</div><div class="footer-links"><a href="https://shopee.com.my/chemica.hq?entryPoint=ShopByPDP" target="_blank" rel="noopener">Shopee</a><a href="https://wa.me/60134835772" target="_blank" rel="noopener">WhatsApp</a></div></div>
+</footer>
+
+<div class="cart-fab" id="cartFab"><b><span id="cartCount">0</span> item · <span id="cartTotalMini">RM0.00</span></b><button id="openCart">Semak order</button></div>
+<div class="drawer-backdrop" id="backdrop"></div>
+<aside class="drawer" id="drawer" aria-label="Order cart">
+  <div class="drawer-head"><h3>Order anda</h3><button class="close" id="closeCart" aria-label="Tutup">×</button></div>
+  <div class="cart-list" id="cartList"><div class="cart-empty">Belum ada produk.</div></div>
+  <div class="drawer-foot"><div class="total"><b>Anggaran jumlah</b><b id="cartTotal">RM0.00</b></div><button class="btn btn-primary" id="waOrder">Hantar order ke WhatsApp</button><div class="fine">Harga akhir, postage dan promo akan disahkan oleh Chemica.</div></div>
+</aside>
+<script>
+  const cart = {};
+  const money = n => `RM${n.toFixed(2)}`;
+  const fab = document.getElementById('cartFab'), drawer = document.getElementById('drawer'), backdrop = document.getElementById('backdrop');
+  function totals(){let count=0,total=0;Object.values(cart).forEach(i=>{count+=i.qty;total+=i.qty*i.price});return {count,total}}
+  function render(){
+    const {count,total}=totals();document.getElementById('cartCount').textContent=count;document.getElementById('cartTotalMini').textContent=money(total);document.getElementById('cartTotal').textContent=money(total);fab.classList.toggle('show',count>0);
+    const list=document.getElementById('cartList');const items=Object.values(cart);
+    if(!items.length){list.innerHTML='<div class="cart-empty">Belum ada produk.</div>';return}
+    list.innerHTML=items.map(i=>`<div class="cart-item"><div><b>${i.name}</b><span>${money(i.price)} each</span></div><div class="qty"><button data-act="minus" data-name="${i.name}">−</button><b>${i.qty}</b><button data-act="plus" data-name="${i.name}">+</button></div></div>`).join('');
+  }
+  document.querySelectorAll('.add').forEach(btn=>btn.addEventListener('click',()=>{const name=btn.dataset.name,price=Number(btn.dataset.price);cart[name]??={name,price,qty:0};cart[name].qty++;render()}));
+  document.getElementById('cartList').addEventListener('click',e=>{const b=e.target.closest('button[data-act]');if(!b)return;const i=cart[b.dataset.name];if(b.dataset.act==='plus')i.qty++;else i.qty--;if(i.qty<=0)delete cart[b.dataset.name];render()});
+  function openDrawer(){drawer.classList.add('show');backdrop.classList.add('show')}function closeDrawer(){drawer.classList.remove('show');backdrop.classList.remove('show')}
+  document.getElementById('openCart').onclick=openDrawer;document.getElementById('closeCart').onclick=closeDrawer;backdrop.onclick=closeDrawer;
+  document.getElementById('waOrder').onclick=()=>{const {count,total}=totals();if(!count)return;const lines=Object.values(cart).map(i=>`• ${i.name} x${i.qty} = ${money(i.price*i.qty)}`);const text=`Hi Chemica, saya nak order:\n\n${lines.join('\n')}\n\nAnggaran jumlah: ${money(total)}\n\nBoleh confirm stock, postage dan harga akhir?`;window.open(`https://wa.me/60134835772?text=${encodeURIComponent(text)}`,'_blank')};
+  document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+</script>
+</body>
+</html>
