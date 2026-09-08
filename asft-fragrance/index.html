@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0d0c0b" />
+  <meta name="description" content="ASFT Parfum — konsep e-commerce perfume premium dengan katalog, scent finder, cart dan checkout." />
+  <title>ASFT Parfum | Find Your Signature</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">PREVIEW CONCEPT · PERFUME E-COMMERCE FOR ASFT ENTERPRISE</div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="ASFT Parfum home">
+      <span class="brand-main">ASFT</span><span class="brand-sub">PARFUM</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#collection">Collection</a>
+      <a href="#finder">Scent Finder</a>
+      <a href="#story">Our Story</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-link" href="https://www.threads.com/@asadabdul.karim_" target="_blank" rel="noopener">Threads ↗</a>
+      <button class="cart-button" id="cartButton" aria-label="Open cart">Bag <span id="cartCount">0</span></button>
+      <button class="menu-button" id="menuButton" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#collection">Collection</a><a href="#finder">Scent Finder</a><a href="#story">Our Story</a><a href="#faq">FAQ</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">The first impression fades. The scent remains.</p>
+        <h1>Find your<br><em>signature.</em></h1>
+        <p class="hero-lead">A modern fragrance house created for people who want to be remembered. Discover scents built around mood, character and presence.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#collection">Shop the collection</a>
+          <button class="btn btn-ghost" data-open-finder>Find my scent</button>
+        </div>
+        <div class="hero-meta">
+          <span><b>Long-lasting</b><small>EDP concentration</small></span>
+          <span><b>Local delivery</b><small>Malaysia-wide</small></span>
+          <span><b>Easy checkout</b><small>FPX / card ready</small></span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Luxury perfume bottle illustration">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="hero-bottle-wrap">
+          <div class="bottle-cap"></div>
+          <div class="bottle-neck"></div>
+          <div class="bottle-glass">
+            <div class="bottle-shine"></div>
+            <div class="bottle-label"><strong>ASFT</strong><span>NOIR 01</span><small>EAU DE PARFUM</small></div>
+          </div>
+          <div class="bottle-shadow"></div>
+        </div>
+        <div class="floating-note note-one">BERGAMOT<br><span>TOP NOTE</span></div>
+        <div class="floating-note note-two">AMBER<br><span>BASE NOTE</span></div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Brand attributes">
+      <div class="marquee-track">
+        <span>MODERN MALAYSIAN FRAGRANCE</span><i>✦</i><span>MADE TO BE REMEMBERED</span><i>✦</i><span>DAY TO NIGHT</span><i>✦</i><span>YOUR SCENT, YOUR PRESENCE</span><i>✦</i>
+        <span>MODERN MALAYSIAN FRAGRANCE</span><i>✦</i><span>MADE TO BE REMEMBERED</span><i>✦</i><span>DAY TO NIGHT</span><i>✦</i><span>YOUR SCENT, YOUR PRESENCE</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section collection" id="collection">
+      <div class="section-head reveal">
+        <div><p class="eyebrow dark">The signature collection</p><h2>Choose how you want<br>to be remembered.</h2></div>
+        <p>Four directions. Four different energies. Product names, notes and prices below are preview placeholders until the final perfume catalogue is supplied.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card reveal" data-product="Noir 01" data-price="79">
+          <div class="product-art art-noir"><div class="mini-bottle"><span>ASFT</span><small>NOIR 01</small></div><div class="art-caption">WOODY · AMBER · NIGHT</div></div>
+          <div class="product-info"><div><h3>Noir 01</h3><p>Bergamot · Black Pepper · Amberwood</p></div><div class="price-row"><b>RM79</b><button class="add-btn">Add +</button></div></div>
+        </article>
+
+        <article class="product-card reveal" data-product="Velvet Oud" data-price="89">
+          <div class="product-art art-oud"><div class="mini-bottle tall"><span>ASFT</span><small>VELVET OUD</small></div><div class="art-caption">OUD · ROSE · SMOKE</div></div>
+          <div class="product-info"><div><h3>Velvet Oud</h3><p>Damask Rose · Oud · Tonka Bean</p></div><div class="price-row"><b>RM89</b><button class="add-btn">Add +</button></div></div>
+        </article>
+
+        <article class="product-card reveal" data-product="White Musk" data-price="69">
+          <div class="product-art art-musk"><div class="mini-bottle pale"><span>ASFT</span><small>WHITE MUSK</small></div><div class="art-caption">CLEAN · MUSK · SKIN</div></div>
+          <div class="product-info"><div><h3>White Musk</h3><p>Neroli · White Tea · Soft Musk</p></div><div class="price-row"><b>RM69</b><button class="add-btn">Add +</button></div></div>
+        </article>
+
+        <article class="product-card reveal" data-product="Amber Bloom" data-price="79">
+          <div class="product-art art-amber"><div class="mini-bottle amber"><span>ASFT</span><small>AMBER BLOOM</small></div><div class="art-caption">FLORAL · AMBER · WARM</div></div>
+          <div class="product-info"><div><h3>Amber Bloom</h3><p>Saffron · Jasmine · Golden Amber</p></div><div class="price-row"><b>RM79</b><button class="add-btn">Add +</button></div></div>
+        </article>
+      </div>
+
+      <div class="catalogue-note reveal"><span>01</span><p><strong>Built for ads, not just browsing.</strong> Every perfume can have its own campaign landing page, UTM tracking, Meta Pixel and direct checkout flow.</p></div>
+    </section>
+
+    <section class="finder section-dark" id="finder">
+      <div class="finder-copy reveal">
+        <p class="eyebrow light">Not sure what fits you?</p>
+        <h2>Your scent should<br>match your energy.</h2>
+        <p>Answer three quick questions. The site recommends a perfume, then takes the customer straight to the product or checkout.</p>
+        <button class="btn btn-gold" data-open-finder>Start Scent Finder</button>
+      </div>
+      <div class="finder-card reveal">
+        <div class="finder-card-top"><span>SCENT PROFILE</span><span>01 / 03</span></div>
+        <div class="radar-art"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="radar-dot d1"></div><div class="radar-dot d2"></div><div class="radar-dot d3"></div><div class="radar-core">YOU</div></div>
+        <div class="profile-bars"><div><span>Fresh</span><i style="--w:72%"></i></div><div><span>Warm</span><i style="--w:58%"></i></div><div><span>Bold</span><i style="--w:86%"></i></div></div>
+      </div>
+    </section>
+
+    <section class="section story" id="story">
+      <div class="story-image reveal">
+        <div class="story-monogram">A</div><div class="story-line"></div><p>BANTING<br>SELANGOR</p>
+      </div>
+      <div class="story-copy reveal">
+        <p class="eyebrow dark">A business already built for digital</p>
+        <h2>From fashion commerce<br>to fragrance.</h2>
+        <p>This concept positions the perfume line as a natural extension of a digital-first retail business. The website is designed to support content, Meta ads, creators and direct-response campaigns, not merely function as a corporate profile.</p>
+        <div class="story-stats"><div><b>24/7</b><span>Customer-ready catalogue</span></div><div><b>1 tap</b><span>WhatsApp or checkout</span></div><div><b>100%</b><span>Mobile-first experience</span></div></div>
+      </div>
+    </section>
+
+    <section class="campaign section">
+      <div class="campaign-head reveal"><p class="eyebrow dark">Campaign-ready system</p><h2>One website.<br>Multiple sales funnels.</h2></div>
+      <div class="campaign-grid">
+        <article class="reveal"><span>01</span><h3>Meta Ad Landing Pages</h3><p>Create focused pages for each creative angle, scent, bundle or promotion so ad traffic lands on the exact message it clicked.</p></article>
+        <article class="reveal"><span>02</span><h3>Creator & Affiliate Codes</h3><p>Track campaign links and promo codes per creator. Ready to connect to an affiliate dashboard later.</p></article>
+        <article class="reveal"><span>03</span><h3>Cart + Payment Gateway</h3><p>Cart is already demonstrated here. Production can connect to Billplz, ToyyibPay or another Malaysian gateway.</p></article>
+        <article class="reveal"><span>04</span><h3>Live Sales & Analytics</h3><p>GA4, Meta Pixel and conversion events can feed campaign data back into ads and a dashboard similar to the sales workflow already used.</p></article>
+      </div>
+    </section>
+
+    <section class="bundle section-dark">
+      <div class="bundle-art reveal"><div class="bundle-box"><strong>ASFT</strong><span>DISCOVERY SET</span><small>4 × 5ML</small></div><div class="sample s1"></div><div class="sample s2"></div><div class="sample s3"></div></div>
+      <div class="bundle-copy reveal"><p class="eyebrow light">Lower the first-purchase barrier</p><h2>Try first.<br>Choose your full bottle later.</h2><p>A discovery set is ideal for customers coming from social ads who are interested but not yet ready to commit to one full-size scent.</p><button class="btn btn-gold" data-add-bundle>Add Discovery Set · RM49</button></div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="faq-head reveal"><p class="eyebrow dark">Frequently asked</p><h2>Everything before<br>the first spray.</h2></div>
+      <div class="faq-list reveal">
+        <details open><summary>How do customers order?</summary><p>Customers add items to the bag, enter their details, then proceed to a payment gateway or WhatsApp-assisted checkout. The final production flow can follow ASFT's preferred operation.</p></details>
+        <details><summary>Can this connect to Meta ads?</summary><p>Yes. Meta Pixel, ViewContent, AddToCart, InitiateCheckout and Purchase events can be implemented so campaigns can optimize against actual customer behavior.</p></details>
+        <details><summary>Can there be different landing pages?</summary><p>Yes. We can create a focused page for each scent, bundle, creator campaign or promotion while keeping all sales and analytics under one domain.</p></details>
+        <details><summary>Can products and prices be changed later?</summary><p>Yes. The catalogue is structured so final names, notes, bottle sizes, images, pricing and stock can be replaced once ASFT shares the confirmed product list.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="final-bottle"><div class="bottle-glass final-glass"><div class="bottle-label"><strong>ASFT</strong><span>YOUR SIGNATURE</span><small>EAU DE PARFUM</small></div></div></div>
+      <div class="final-copy"><p class="eyebrow light">Ready when the perfume is.</p><h2>Turn attention<br>into orders.</h2><p>Mobile-first catalogue, campaign landing pages, cart, payment-ready checkout and WhatsApp support in one clean system.</p><a class="btn btn-gold" href="https://wa.me/601115049049?text=Hi%20ASFT%2C%20saya%20nak%20tanya%20tentang%20koleksi%20perfume." target="_blank" rel="noopener">WhatsApp ASFT</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-main">ASFT</span><span class="brand-sub">PARFUM</span></a>
+    <div><p>Preview concept for ASFT Enterprise · Banting, Selangor</p><p><a href="mailto:asftent@gmail.com">asftent@gmail.com</a> · <a href="tel:+601115049049">011-1504 9049</a></p></div>
+    <p class="footer-note">Concept products, names, scent notes and prices are placeholders for presentation only.</p>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><small>YOUR BAG</small><h3>Selected scents</h3></div><button id="closeCart">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your bag is empty.</p></div>
+    <div class="drawer-foot"><div class="subtotal"><span>Subtotal</span><strong id="cartTotal">RM0</strong></div><button class="checkout-btn" id="checkoutButton">Checkout securely</button><button class="wa-checkout" id="waCheckout">Checkout via WhatsApp</button><p>Payment gateway button is a preview until merchant credentials are connected.</p></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="modal" id="finderModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeFinder">×</button>
+      <p class="eyebrow dark">Scent Finder</p>
+      <div id="quizStage"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Added to bag</div>
+  <script src="app.js"></script>
+</body>
+</html>
