@@ -239,7 +239,7 @@ function createLeafCard(writer, origin, direction, width, length, color, rng) {
   const c=writer.vert(p2,normal,[1,1],color), d=writer.vert(p3,normal,[0,1],color);
   writer.tri(a,b,d);writer.tri(b,c,d);
 }
-function disposeTextures(p){for(const k of ['color','normal','roughness'])p[k].dispose();}
+function disposeTextures(p){for(const k of ['color','normal','roughness'])p[k]?.dispose();}
 
 function generateTree(input={}) {
   const opts={...DEFAULTS,...input};
